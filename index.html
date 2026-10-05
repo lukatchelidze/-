@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="ka">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ტუპუნგატოს მყინვარი – დედამიწის მყიფე ზონა | ბლოგი</title>
+
+    <style>
+
+        :root {
+
+            --primary-color: #1e3a8a;
+
+            --secondary-color: #0284c7;
+
+            --accent-color: #0d9488;
+
+            --bg-color: #f8fafc;
+
+            --card-bg: #ffffff;
+
+            --text-color: #334155;
+
+            --heading-color: #0f172a;
+
+        }
+
+
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            background-color: var(--bg-color);
+
+            color: var(--text-color);
+
+            line-height: 1.7;
+
+        }
+
+
+
+        header {
+
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 58, 138, 0.85) 100%),
+
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+
+            color: white;
+
+            padding: 4rem 1rem;
+
+            text-align: center;
+
+        }
+
+
+
+        header h1 {
+
+            font-size: 2.2rem;
+
+            margin-bottom: 0.8rem;
+
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+        }
+
+
+
+        .badge {
+
+            display: inline-block;
+
+            background-color: var(--accent-color);
+
+            color: white;
+
+            padding: 0.4rem 1rem;
+
+            border-radius: 20px;
+
+            font-size: 0.9rem;
+
+            font-weight: bold;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .container {
+
+            max-width: 900px;
+
+            margin: -2rem auto 3rem auto;
+
+            padding: 0 1rem;
+
+        }
+
+
+
+        .meta-card {
+
+            background: var(--card-bg);
+
+            border-radius: 12px;
+
+            padding: 1.5rem;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+            margin-bottom: 2rem;
+
+            border-left: 5px solid var(--secondary-color);
+
+        }
+
+
+
+        .meta-card h3 {
+
+            color: var(--primary-color);
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .concepts-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 0.5rem;
+
+            margin-top: 0.5rem;
+
+        }
+
+
+
+        .concept-tag {
+
+            background-color: #e0f2fe;
+
+            color: #0369a1;
+
+            padding: 0.3rem 0.7rem;
+
+            border-radius: 6px;
+
+            font-size: 0.85rem;
+
+            font-weight: bold;
+
+        }
+
+
+
+        .content-card {
+
+            background: var(--card-bg);
+
+            border-radius: 12px;
+
+            padding: 2rem;
+
+            margin-bottom: 2rem;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+            overflow: hidden;
+
+        }
+
+
+
+        .blog-image {
+
+            width: 100%;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            margin: 1.2rem 0;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+        }
+
+
+
+        .image-caption {
+
+            font-size: 0.85rem;
+
+            color: #64748b;
+
+            text-align: center;
+
+            margin-top: -0.8rem;
+
+            margin-bottom: 1.5rem;
+
+            font-style: italic;
+
+        }
+
+
+
+        .criterion-box {
+
+            background-color: #f0fdf4;
+
+            border: 1px solid #bbf7d0;
+
+            border-left: 5px solid #16a34a;
+
+            padding: 1rem 1.2rem;
+
+            margin-bottom: 1.5rem;
+
+            border-radius: 6px;
+
+        }
+
+
+
+        .criterion-title {
+
+            font-weight: bold;
+
+            color: #15803d;
+
+            margin-bottom: 0.3rem;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.5rem;
+
+        }
+
+
+
+        h2 {
+
+            color: var(--primary-color);
+
+            margin-bottom: 1rem;
+
+            font-size: 1.5rem;
+
+        }
+
+
+
+        h3 {
+
+            color: var(--heading-color);
+
+            margin: 1.2rem 0 0.5rem 0;
+
+        }
+
+
+
+        p {
+
+            margin-bottom: 1rem;
+
+            text-align: justify;
+
+        }
+
+
+
+        ul {
+
+            margin-left: 1.5rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        li {
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .quote-box {
+
+            background: #f1f5f9;
+
+            border-left: 4px solid var(--primary-color);
+
+            padding: 1rem;
+
+            font-style: italic;
+
+            margin: 1.5rem 0;
+
+            border-radius: 0 8px 8px 0;
+
+        }
+
+
+
+        footer {
+
+            background-color: #0f172a;
+
+            color: #94a3b8;
+
+            text-align: center;
+
+            padding: 2rem 1rem;
+
+            margin-top: 3rem;
+
+        }
+
+
+
+        footer p {
+
+            text-align: center;
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        @media (max-width: 600px) {
+
+            header h1 {
+
+                font-size: 1.6rem;
+
+            }
+
+            .content-card {
+
+                padding: 1.2rem;
+
+            }
+
+            .blog-image {
+
+                height: 220px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <span class="badge">ორგანიზაცია „მთის მყინვარების მცველი“</span>
+
+        <h1>ტუპუნგატოს მყინვარი – დედამიწის ერთ-ერთი ყველაზე მყიფე ზონა</h1>
+
+        <p>ეკოლოგიური ბლოგი საზოგადოებრივი ცნობიერების ამაღლებისთვის</p>
+
+    </header>
+
+
+
+    <div class="container">
+
+
+
+        <!-- მეტა ინფორმაცია / სამიზნე ცნებები -->
+
+        <div class="meta-card">
+
+            <h3>📌 დავალების ძირითადი პარამეტრები</h3>
+
+            <p><strong>საკვანძო შეკითხვა:</strong> როგორ დავიცვათ მთის მყინვარები გლობალური კლიმატცვლილების უარყოფითი ზეგავლენისგან?</p>
+
+            <div style="margin-top: 10px;">
+
+                <strong>სამიზნე ცნებები:</strong>
+
+                <div class="concepts-list">
+
+                    <span class="concept-tag">გეოგრაფიული გარსი</span>
+
+                    <span class="concept-tag">მოსახლეობა და მეურნეობა</span>
+
+                    <span class="concept-tag">მდგრადი განვითარება</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- შესავალი -->
+
+        <div class="content-card">
+
+            <h2>შესავალი: მყინვარები – კლიმატის ცვლილების სარკე</h2>
+
+            <p>კლიმატის ამჟამინდელი ცვლილების დაწყებასთან ერთად, მთელ მსოფლიოში მყინვარების დნობის პროცესი კატასტროფულად აჩქარდა. აშშ-ის თოვლისა და ყინულის ეროვნული ცენტრის (NSIDC) მონაცემებით, მნიშვნელოვნად შემცირდა როგორც შელფური, ისე მთის მყინვარების ფართობები. მეცნიერთა აზრით, სწორედ მყინვარია კლიმატის ცვლილების ყველაზე ზუსტი საზომი.</p>
+
+           
+
+            <img class="blog-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="მთის მყინვარი">
+
+            <div class="image-caption">ფოტო 1: მთის მყინვარების მასივი — დედამიწის ეკოლოგიური წონასწორობის გარანტი.</div>
+
+
+
+            <div class="quote-box">
+
+                „უკანდახეული მყინვარები ტოვებენ ნაკვალევს, რომელიც წარსულის შესახებ გვიყვება და მომავლის საფრთხეებზე გაფრთხილებს.“
+
+            </div>
+
+
+
+            <p>როგორც ორგანიზაცია <strong>„მთის მყინვარების მცველის“</strong> წევრი, ამ სტატიაში განვიხილავ ანდების ერთ-ერთ ყველაზე მყიფე ზონას – **ტუპუნგატოს მყინვარს** – და მის მნიშვნელობას ადგილობრივ ეკოსისტემასა და მოსახლეობაზე.</p>
+
+        </div>
+
+
+
+        <!-- კრიტერიუმი 1 -->
+
+        <div class="content-card">
+
+            <div class="criterion-box">
+
+                <div class="criterion-title">🎯 შეფასების კრიტერიუმი 1</div>
+
+                <div>ანთროპოგენური ფაქტორით გამოწვეული გლობალური კლიმატცვლილების ასახვა ტუპუნგატოს მთისა და პლანეტის სხვა მყინვარებზე.</div>
+
+            </div>
+
+
+
+            <h2>1. ანთროპოგენური ზემოქმედება და ტუპუნგატოს მყინვარის კრიზისი</h2>
+
+            <p>ადამიანის სამრეწველო საქმიანობამ, სათბურის გაზების (CO2, მეთანი) მასობრივმა ემისიამ და წიაღისეული საწვავის მოხმარებამ გამოიწვია გლობალური ტემპერატურის მატება. ეს ანთროპოგენური ფაქტორები პირდაპირ დარტყმას აყენებს გეოგრაფიულ გარსსა და მყინვარულ საფარს.</p>
+
+           
+
+            <img class="blog-image" src="aa70e64d-aedf-46f6-a010-921fbe9874c5.jpg" alt="მყინვარის დნობა">
+
+            <div class="image-caption">ფოტო 2: გლობალური დათბობის შედეგად მყინვარების სწრაფი დნობის პროცესი.</div>
+
+
+
+            <p><strong>ტუპუნგატოს მწვერვალი</strong> (სამხრეთ ამერიკა, ანდები) წარმოადგენს რეგიონის ერთ-ერთ უმნიშვნელოვანეს წყლის რეზერვუარს. გლობალური დათბობის გამო:</p>
+
+            <ul>
+
+                <li><strong>ფართობისა და მასის შემცირება:</strong> ტუპუნგატოს მყინვარი ყოველწლიურად კარგავს თავისი ყინულის მასის მნიშვნელოვან პროცენტს.</li>
+
+                <li><strong>ალბედოს ეფექტის შემცირება:</strong> ყინულის დნობასთან ერთად მცირდება მზის სხივების არეკვლის უნარი (ალბედო), რაც აჩქარებს დედამიწის ზედაპირის კიდევ უფრო მეტად გახურებას.</li>
+
+                <li><strong>გლობალური პარალელები:</strong> მსგავსი სავალალო სურათია კავკასიონის (მაგ. ჭალაათის, დევდორაკის), ალპებისა და ჰიმალაის მყინვარებზეც, სადაც ყინულოვანი საფარი კატასტროფული ტემპით უკან იხევს.</li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- კრიტერიუმი 2 -->
+
+        <div class="content-card">
+
+            <div class="criterion-box">
+
+                <div class="criterion-title">🎯 შეფასების კრიტერიუმი 2</div>
+
+                <div>ადგილობრივი მოსახლეობის ყოველდღიურობის ცვლილება, ცხოვრების ხარისხი და სახელმწიფოს როლი გამოწვევებთან გამკლავებაში.</div>
+
+            </div>
+
+
+
+            <h2>2. გავლენა მოსახლეობაზე, მეურნეობასა და სახელმწიფოს პოლიტიკაზე</h2>
+
+            <p>მყინვარის დნობა არ არის მხოლოდ ეკოლოგიური პრობლემა – ის პირდაპირ აისახება <strong>მოსახლეობასა და მეურნეობაზე</strong>.</p>
+
+            <p>ტუპუნგატოს მყინვარი კვებავს მდინარეებს, რომლებიც სასმელი და სოფლის მეურნეობის წყლით ამარაგებს ჩილესა და არგენტინის მიმდებარე რეგიონებს (მათ შორის, მრავალმილიონიან ქალაქ სანტიაგოს).</p>
+
+
+
+            <img class="blog-image" src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1000&q=80" alt="მთის მდინარე და სოფლის მეურნეობა">
+
+            <div class="image-caption">ფოტო 3: მყინვარული მდინარეები, რომლებიც მოსახლეობას სასმელი და სარწყავი წყლით ამარაგებს.</div>
+
+
+
+            <h3>მოსახლეობის წინაშე არსებული საფრთხეები:</h3>
+
+            <ul>
+
+                <li><strong>მტკნარი წყლის დეფიციტი:</strong> მყინვარის გაქრობა გამოიწვევს სასმელი და სარწყავი წყლის კრიტიკულ შემცირებას, რაც საფრთხეს შეუქმნის სოფლის მეურნეობასა და სურსათის უვნებლობას.</li>
+
+                <li><strong>სტიქიური უბედურებები:</strong> მყინვარული ტბების ჩამოყალიბება და მათი გარღვევა (GLOF), მეწყრები და წყალდიდობები საფრთხეს უქმნის ადგილობრივი მოსახლეობის სიცოცხლესა და ინფრასტრუქტურას.</li>
+
+                <li><strong>ეკონომიკური და რეკრეაციული ზარალი:</strong> მცირდება ტურიზმისა და მთასვლელობის პოტენციალი, იცვლება ტრადიციული სამეურნეო საქმიანობა.</li>
+
+            </ul>
+
+
+
+            <h3>სახელმწიფოს როლი და რეაგირება:</h3>
+
+            <p>სახელმწიფო უწყებები ამ გამოწვევებს უმკლავდებიან მდგრადი ტერიტორიული დაგეგმარებისა და სივრცითი მოწყობის გზით. ეს მოიცავს: წყლის რესურსების ეფექტურ მართვას, ადრეული შეტყობინების სისტემების დანერგვას სტიქიების თავიდან ასაცილებლად და დაცული ტერიტორიების სტატუსის მინიჭებას მთიანი ზონებისთვის.</p>
+
+        </div>
+
+
+
+        <!-- კრიტერიუმი 3 -->
+
+        <div class="content-card">
+
+            <div class="criterion-box">
+
+                <div class="criterion-title">🎯 შეფასების კრიტერიუმი 3</div>
+
+                <div>მყინვარების დნობის შეჩერების მნიშვნელობა და მისი ასახვა მთიანი რეგიონების მდგრად განვითარებაზე.</div>
+
+            </div>
+
+
+
+            <h2>3. მყინვარების შენარჩუნება და მდგრადი განვითარება</h2>
+
+            <p>მყინვარების, მათ შორის ტუპუნგატოს, დნობის შეჩერება სასიცოცხლოდ მნიშვნელოვანია პლანეტის ეკოლოგიური ბალანსის შენარჩუნებისთვის. ეს პირდაპირ კავშირშია <strong>მდგრადი განვითარების</strong> პრინციპებთან.</p>
+
+
+
+            <img class="blog-image" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1000&q=80" alt="მდგრადი ბუნება">
+
+            <div class="image-caption">ფოტო 4: ბუნების შენარჩუნება მომავალი თაობებისა და მდგრადი განვითარებისთვის.</div>
+
+
+
+            <h3>რატომ არის ეს მნიშვნელოვანი?</h3>
+
+            <ul>
+
+                <li><strong>ეკოსისტემების სტაბილურობა:</strong> მყინვარები უზრუნველყოფენ უნიკალური ბიომრავალფეროვნების გადარჩენას.</li>
+
+                <li><strong>მომავალი თაობების რესურსები:</strong> მდგრადი განვითარების მთავარი არსი ისაა, რომ დღევანდელმა თაობამ ისე დაიკმაყოფილოს საჭიროებები, რომ საფრთხე არ შეუქმნას მომავალ თაობებს. მყინვარების დაცვა უზრუნველყოფს მტკნარი წყლის მარაგის შენარჩუნებას.</li>
+
+                <li><strong>მდგრადი ტურიზმი და ეკონომიკა:</strong> ჯანსაღი მთიანი გარემო იძლევა ეკოტურიზმისა და ადგილობრივი თემების გრძელვადიანი განვითარების საშუალებას.</li>
+
+            </ul>
+
+
+
+            <div class="quote-box">
+
+                <strong>მოწოდება მოქმედებისკენ:</strong> თითოეულ ადამიანს შეუძლია შეიტანოს წვლილი კლიმატის ცვლილების შემცირებაში – ენერგიის დაზოგვით, მწვანე ტექნოლოგიების მხარდაჭერითა და გარემოსდაცვითი ცნობიერების ამაღლებით!
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <footer>
+
+        <p>© 2026 „მთის მყინვარების მცველი“ | კომპლექსური დავალება გეოგრაფიაში</p>
+
+    </footer>
+
+
+
+</body>
+
+</html>
